@@ -10,8 +10,12 @@
         <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
         <title>King Movie</title>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-        <link rel="stylesheet" href="HomePage.css">
+        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>     
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+        <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="./HomePage.css">
         <title>HomePage</title>
     </head>
 
@@ -60,54 +64,9 @@
             </div>
 
             <div class="HomePage-body">
-                <div class="HomePage-firstcontent row">
-                    <div class="HomePage-leftcontent col-md-8">
-                        <div class="Leftcontent-recommendedmovie">
-                            <div id="carouselExampleIndicators" class="carousel slide parent-slide">
-<!--                                <div class="carousel-indicators">
-                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                                </div>-->
-                                <div class="carousel-inner Left-slide">
-                                    <div class="carousel-item active">
-                                        <img class="img-slide" src="./src-img/pexels-eberhard-grossgasteiger-640781.jpg" alt="First slide">
-                                        <div class="slide-model-trailer img-child-slide"> 
-                                            <img src="https://m.media-amazon.com/images/M/MV5BMTQzODZjNmUtNjQxYi00MWNjLThlYWUtMjUwYzA3YzY2ZTJmXkEyXkFqcGc@._V1_QL75_UX140_CR0,0,140,207_.jpg">                                   
-                                            <div class="child-action">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-circles btn-play" viewBox="0 0 16 16">
-                                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
-                                                    <path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445"/>
-                                                </svg>
-                                                <span class="while-font">Bla bla film</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="carousel-item">
-                                        <img class="img-slide" src="./src-img/pexels-christian-heitz-842711.jpg" alt="Second slide">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img class="img-slide" src="./src-img/pexels-eberhard-grossgasteiger-1624255.jpg" alt="Third slide">
-                                    </div>
-                                </div>
-                                <button class="carousel-control-prev btn-prennext" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Previous</span>
-                                </button>
-                                <button class="carousel-control-next btn-prennext" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Next</span>
-                                </button>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="HomePage-rightcontent col-md-4">
-
-                    </div>
-                </div>
+                <jsp:include page="first-content.jsp" />
+                <jsp:include page="feartured-today.jsp" />
+                <jsp:include page="Top10ThisWeek.jsp" />
 
             </div>
 
