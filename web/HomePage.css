@@ -1,0 +1,66 @@
+.container-fluid {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+}
+
+.collapse.navbar-collapse {
+    flex-grow: 0 !important;
+}
+
+.navbar-container{
+    background-color: black !important;
+}
+.while-font {
+    color:#fff !important;
+}
+.title-header{
+        font-weight: 800;
+}
+.HomePage-body{
+    margin: 20px 70px 0 70px;
+    max-height: 100%;
+    max-width: 100%;
+}
+.HomePage-firstcontent{
+    max-height: 100%;
+    max-width: 100%;
+}
+.Leftcontent-recommendedmovie{
+    max-height: 100%;
+    max-width: 80%;
+}
+.img-slide {
+    width: 100%;
+    height: 100%; /* Optional: Maintain aspect ratio */
+}
+.carousel-item{
+    width: 100%;
+    height: 100%;
+}
+.parent-slide{
+    height: auto;
+    width: 100%;
+}
+.img-child-slide{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    left: 10px;
+    bottom: 0;
+    
+}
+.btn-prennext{
+    height: 30%;
+    align-self: center;
+}
+.child-action{
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+.btn-play{
+    color: #fff;
+      height: 50px;
+    width: 50px;  
+}
