@@ -1,0 +1,390 @@
+/*
+    body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    width: 100%;
+    overflow-x: hidden;
+
+
+    }
+    .whole-site{
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    background-color: #000;
+    }
+    .main{
+    display: flex;
+    flex-direction: row;
+
+    }
+     này phần của C là 65% hì 
+    .main-left{
+    width: 65%;
+
+    }
+    .main-left img{
+    width: 100%;
+
+    }
+
+     còn này là cái right content t bỏ 34% 
+    .main-right{
+    width: 34%;
+    margin: 5px 5px;
+    margin-left: 20px;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    }
+    .main-right .mainr-title
+    {
+    width: 100%;
+    color: #F5C518;
+    font-weight: bold;
+    font-size: 25px;
+    position: relative;
+    left: 6px;
+
+    }
+    .main-right .mainr-info {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: 38px;
+    width: 90%;
+    height: 500px;
+    border: 2px solid #101010;
+    background-color: #101010;
+    display: flex;
+    flex-direction: column;
+    }
+    .main-right .mainr-info .mainr-information{
+    display: flex;
+    flex-direction: row;
+    margin: 10px 10px;
+    height: 33%;
+    }
+    .main-right .mainr-info .mainr-information .mainr-information-img{
+    width: 30%;
+    }
+    .mainr-information-img img{
+    width: 90%;
+    height: 90%;
+    }
+    .mainr-information-dt{
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    }
+    .mainr-information-dt .mainr-information-details{
+    width: 100%;
+    padding-left: 10px;
+    font-size: 15px;
+    }
+    .no-wrap {
+    white-space: nowrap;
+    }
+    .gray-text {
+    color: gray;
+    font-size: smaller;
+    }
+    .play-button {
+    position: relative;
+    left: 10px;
+    width: 30px; 
+    height: 30px;
+    border-radius: 50%;
+    background-color: black; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white; 
+    margin-bottom: 10px;
+    }
+    .play-button:hover {
+    background-color: black ;
+    border: 2px solid #F5C518;
+    }
+    .triangle {
+    width: 0;
+    height: 0;
+    border-top: 9px solid transparent; 
+    border-bottom: 9px solid transparent;
+    border-left: 9px solid white; 
+    }
+    .reactions {
+    display: flex; 
+    align-items: center; 
+    position: relative;
+    left: 10px;
+    margin-top: 10px;
+    }
+    .reaction {
+    margin-right: 5px;
+    font-size: 14px; 
+    }
+    .reaction .fa-thumbs-up {
+    color: blue; 
+    }
+
+    .reaction .fa-heart {
+    color: #ff69b4; 
+    }
+
+    .fa-grin, .fa-laugh, .fa-smile, .fa-surprise {
+    color: yellow; 
+    }
+
+ topnews 
+.new{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.header-new {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    margin-left: 20px;
+    display: flex;  Sử dụng flexbox để căn chỉnh 
+    align-items: center;  Căn giữa theo chiều dọc 
+
+    }
+    .header-new:hover{
+    color: gold;
+    }
+
+    .bar {
+    width: 5px;  Độ rộng của thanh vàng 
+    height: 30px;  Chiều cao của thanh vàng 
+    background-color: gold;
+    margin-right: 10px;  Khoảng cách với chữ 
+    border-radius: 15px;
+    }
+
+    .arrow {
+    margin-left: auto;  Đẩy mũi tên sang phải 
+    font-size: 20px;  Kích thước mũi tên 
+    }
+    .dt-new, .new-info{
+        display: flex;
+        flex-direction: row;
+}
+
+
+
+*/
+
+
+
+
+
+
+
+
+    /* css celebiry */
+    .cele{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+
+    }
+    .header-cele {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    margin-left: 20px;
+    display: flex; /* Sử dụng flexbox để căn chỉnh */
+    align-items: center; /* Căn giữa theo chiều dọc */
+
+    }
+    .header-cele:hover{
+    color: gold;
+    }
+
+    .bar {
+    width: 5px; /* Độ rộng của thanh vàng */
+    height: 30px; /* Chiều cao của thanh vàng */
+    background-color: gold;
+    margin-right: 10px; /* Khoảng cách với chữ */
+    border-radius: 15px;
+    }
+
+    .arrow {
+    margin-left: auto; /* Đẩy mũi tên sang phải */
+    font-size: 20px; /* Kích thước mũi tên */
+    }
+    .info-cele{
+    display: flex;
+    flex-direction: row;
+    margin: 15px 10px;
+    }
+    .info-each{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 5px;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+    }
+    .info-img {
+        width: 100%;
+        text-align: center;
+            color: white;
+    }
+    .info-img img {
+        width: 190px;
+        height: 190px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 2px solid ;
+    }
+    .next-button {
+        background-color: black;
+        border: 2px solid white; /* Viền trắng */
+        width: 50px; /* Điều chỉnh chiều rộng */
+        height: 50px; /* Điều chỉnh chiều cao */
+        border-radius: 4px; /* Bo góc */
+        cursor: pointer;
+        position: relative;
+        bottom: -80px;
+        left: 30px;
+        }
+    .next-button:hover {
+        background-color: black; /* Màu nền khi di chuột vào */
+        border-color: gold; /* Màu viền khi di chuột vào */
+        }
+        
+        .next-button:hover::before {
+        border-left-color: gold; /* Màu mũi tên khi di chuột vào */
+        } 
+    .next-button::before {
+        content: '';
+        display: block;
+        width: 0;
+        height: 0;
+        border-top: 12px solid transparent;
+        border-bottom: 12px solid transparent;
+        border-left: 20px solid white; /* Mũi tên tam giác */
+        margin: 14px auto; /* Căn giữa mũi tên */
+        }
+        
+
+
+
+
+
+
+    /* css footer */
+    .footer {
+    background-color: #000;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    }
+
+    .footer .box-1 {
+    border: 2px solid #fdc601;
+    background-color: #fdc601;
+    color: black;
+    padding: 8px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer; 
+    }
+
+    .footer .box-1:hover {
+    background-color: #E2B616;
+    border: 2px solid #E2B616;
+    color: black;
+    }
+
+    .box-2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    width: 100%;
+    }
+
+    .box-2 .box-2-left, .box-2 .box-2-right {
+    border: 2px solid #1F1F1F;
+    border-radius: 10px;
+    padding: 15px;
+    width: 350px;
+    height: 90px;
+    margin: 0 5px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .box-2 .box-2-left .box2l-details {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+
+    }
+
+    .box-2 .box-2-left .box2l-icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    }
+
+    .box-2 .box-2-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 15px;
+    }
+
+    .box-2 .box-2-right .box2r-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    }
+
+    .box2r-icon img {
+    width: 60px;
+    height: 60px;
+    margin-left: 10px;
+    border-radius: 5px;
+    }
+    .box-3, .box-4 {
+    margin-top: 20px;
+    display: flex; 
+    justify-content: space-between; 
+    width: 100%; 
+    }
+
+    .footer-nav {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 10px; 
+    width: 100%; 
+    }
+
+    .footer-nav a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+    } 
+    .box2l-icon .fab {
+    color: white;
+    }
