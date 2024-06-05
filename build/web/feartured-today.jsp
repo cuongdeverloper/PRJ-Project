@@ -32,7 +32,7 @@
                                 <div class="carousel-item active">
                                     <div class="row">
 
-                                        <div class="col-md-4 mb-3">
+                                        <div class="col-md-4 mb-3 card-collum-item">
                                             <div class="card">
                                                 <div class="hoverImg">
                                                     <img class="img-fluid" alt="Movie Thumbnail" src="https://m.media-amazon.com/images/M/MV5BYzEyNTk1Y2EtODQ1YS00MGI1LWI3ZTQtODdkMzc3MjZkZTdmXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,214_.jpg">
@@ -42,13 +42,13 @@
                                                 </div>
                                                 <div class="card-body">
                                                     <h4 class="card-title">Special title treatment</h4>
-                                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                                    <p class="card-text">With sdwqqqq qqqqq qqqqqq qqqqq qquppor ting text below as a natural lead-in to additional content.</p>
                                                 </div>
                                             </div>
 
                                         </div>
                                         
-                                        <div class="col-md-4 mb-3">
+                                        <div class="col-md-4 mb-3 card-collum-item">
                                             <div class="card">
                                                 <div class="hoverImg">
                                                 <img class="img-fluid" alt="100%x280" src="https://m.media-amazon.com/images/M/MV5BOGMwMDIxMDYtYTE3OC00N2YwLTg0YzgtM2U4NzgxMDFmZmQ1XkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,214_.jpg">
@@ -64,7 +64,7 @@
 
                                         </div>
 
-                                      <div class="col-md-4 mb-3">
+                                      <div class="col-md-4 mb-3 card-collum-item">
                                             <div class="card">
                                                 <div class="hoverImg">
                                                 <img class="img-fluid" alt="100%x280" src="https://m.media-amazon.com/images/M/MV5BYTJhYmZmYmEtODZjYy00MzlkLThiYzMtZjQ0NmYwNTRhNzRkXkEyXkFqcGc@._V1_QL75_UX380_CR0,36,380,214_.jpg">
@@ -87,7 +87,7 @@
                                 <div class="carousel-item">
                                      <div class="row">
 
-                                        <div class="col-md-4 mb-3">
+                                        <div class="col-md-4 mb-3 card-collum-item">
                                             <div class="card">
                                                 <div class="hoverImg">
                                                     <img class="img-fluid" alt="Movie Thumbnail" src="https://m.media-amazon.com/images/M/MV5BYzEyNTk1Y2EtODQ1YS00MGI1LWI3ZTQtODdkMzc3MjZkZTdmXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,214_.jpg">
@@ -103,7 +103,7 @@
 
                                         </div>
                                         
-                                        <div class="col-md-4 mb-3">
+                                        <div class="col-md-4 mb-3 card-collum-item">
                                             <div class="card">
                                                 <div class="hoverImg">
                                                 <img class="img-fluid" alt="100%x280" src="https://m.media-amazon.com/images/M/MV5BOGMwMDIxMDYtYTE3OC00N2YwLTg0YzgtM2U4NzgxMDFmZmQ1XkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,214_.jpg">
@@ -119,7 +119,7 @@
 
                                         </div>
 
-                                      <div class="col-md-4 mb-3">
+                                      <div class="col-md-4 mb-3 card-collum-item">
                                             <div class="card">
                                                 <div class="hoverImg">
                                                 <img class="img-fluid" alt="100%x280" src="https://m.media-amazon.com/images/M/MV5BYTJhYmZmYmEtODZjYy00MzlkLThiYzMtZjQ0NmYwNTRhNzRkXkEyXkFqcGc@._V1_QL75_UX380_CR0,36,380,214_.jpg">

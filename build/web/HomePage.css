@@ -19,7 +19,7 @@
     color:#fff !important;
 }
 .title-header{
-        font-weight: 800;
+    font-weight: 800;
 }
 .HomePage-body{
     margin: 20px 70px 0 70px;
@@ -55,26 +55,26 @@
     bottom: 0;
 }
 .img-child-slide img:hover{
-   opacity: 0.9
+    opacity: 0.9
 }
 .btn-prennext{
     height: 30%;
     align-self: center;
 }
 .child-action{
-        height: 100%;
+    height: 100%;
     width: 100%;
     display: flex;
     position: absolute;
     right: -150px;
     bottom: -110px;
-    
+
 }
 
 .btn-play{
     color: #fff;
-      height: 50px;
-    width: 50px;  
+    height: 50px;
+    width: 50px;
 }
 .title-film{
     font-weight: 700
@@ -95,19 +95,19 @@
 .card a{
     display: block;
     cursor: pointer;
-    
+
 }
 .hoverImg {
-  width: 100%;
-  height: 184px !important;
-  overflow: hidden;
-  position: relative;
+    width: 100%;
+    height: 184px !important;
+    overflow: hidden;
+    position: relative;
 }
 
 .hoverImg img {
-  width: 100%;
-  height: 100%;
-  transition: all 1s ease-in-out;
+    width: 100%;
+    height: 100%;
+    transition: all 1s ease-in-out;
 }
 .a-img {
     position: absolute;
@@ -119,22 +119,22 @@
     display: block; /* Ensure the a element behaves like a block */
 }
 .hoverImg:hover img {
-      transform: scale(2,2);
-      
+    transform: scale(2,2);
+
 }
 
 .seePlay {
     width: 100%;
     height: 100%;
     background-image: url('./src-img/R.png');
-        background-size: 40% 40% ;
+    background-size: 40% 40% ;
     background-repeat: no-repeat; /* Added */
     background-position: center; /* Center the background image */
     display: none
 
-/*    position: absolute;
-    top: 0;
-    right:0;*/
+        /*    position: absolute;
+            top: 0;
+            right:0;*/
 }
 .hoverImg:hover .seePlay {
     display: block;
@@ -147,15 +147,15 @@
     position: absolute;
     top: 0;
     right: 0;
-    
+
 }
- /*feartured*/
+/*feartured*/
 .feartured-title{
     color:rgba(245, 245, 54, 0.604)
 }
 .btn-feartured{
     background-color: transparent;
-        border: none
+    border: none
 }
 .btn-feartured i{
     opacity: 0.6
@@ -166,15 +166,52 @@
 }
 
 .card-text{
-/*   white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;*/
+    /*   white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;*/
 }
 .card-title{
     white-space: nowrap;
-            overflow: hidden;
-            /*text-overflow: ellipsis;*/
+    overflow: hidden;
+    /*text-overflow: ellipsis;*/
 }
 .card-body{
     max-height: 100% !important;
+    background-color: rgba(59, 58, 58, 0.333)
+}
+
+
+/*css all div same height and width*/
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.card-collum-item {
+    display: flex;
+    flex-direction: column;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.card-footer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.btn-watchlist{
+    border: 1px solid #333 !important;
+    background-color: #6d6b6b;
+}
+.btn-rating{
+    background: none;
+    border: none
 }
