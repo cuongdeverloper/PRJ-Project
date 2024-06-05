@@ -10,17 +10,18 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>FirstContent</title>
+        <link rel="stylesheet" href="footer.css"/>
     </head>
     <body>
         <div class="HomePage-firstcontent row">
                     <div class="HomePage-leftcontent col-md-8">
                         <div class="Leftcontent-recommendedmovie">
                             <div id="carouselExampleIndicators" class="carousel slide parent-slide">
-<!--                                <div class="carousel-indicators">
+                               <div class="carousel-indicators">
                                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
                                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                                </div>-->
+                                </div>
                                 <div class="carousel-inner Left-slide">
                                     <div class="carousel-item active">
                                         <img class="img-slide" src="./src-img/pexels-eberhard-grossgasteiger-640781.jpg" alt="First slide">
@@ -113,6 +114,7 @@
                     </div>
 
                     <div class="HomePage-rightcontent col-md-4">
+                        
 
                     </div>
                 </div>

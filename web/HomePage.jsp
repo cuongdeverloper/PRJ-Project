@@ -71,7 +71,7 @@
             </div>
 
             <div class="HomePage-footer">
-
+                <jsp:include page="footer.jsp" />
             </div>
 
 
