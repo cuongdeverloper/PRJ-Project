@@ -1,5 +1,5 @@
 .HomePage-container{
-    background-color: #333;
+    background-color: #000000;
     height: 100%;
 }
 .container-fluid {
@@ -11,7 +11,11 @@
 .collapse.navbar-collapse {
     flex-grow: 0 !important;
 }
-
+li.nav-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .navbar-container{
     background-color: black !important;
 }
@@ -32,7 +36,7 @@
 }
 .Leftcontent-recommendedmovie{
     max-height: 100%;
-    max-width: 80%;
+    max-width: 90%;
 }
 .img-slide {
     width: 100%;
@@ -127,7 +131,7 @@
     width: 100%;
     height: 100%;
     background-image: url('./src-img/R.png');
-    background-size: 40% 40% ;
+    background-size: 55% 40% ;
     background-repeat: no-repeat; /* Added */
     background-position: center; /* Center the background image */
     display: none
@@ -135,6 +139,10 @@
         /*    position: absolute;
             top: 0;
             right:0;*/
+}
+.seePlay-featured{
+       background-size: 40% 40% !important;
+
 }
 .hoverImg:hover .seePlay {
     display: block;
@@ -149,7 +157,28 @@
     right: 0;
 
 }
+
+
+/*Header*/
+.modal-dialog {
+    margin: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.modal-content {
+    width: 100%;
+    /* min-height: 100%; */
+    height: 100vh;
+    background-color: #000;
+}
+svg.bi.bi-x-circle-fill {
+    color: yellow;
+}
 /*feartured*/
+.featured-ctn{
+    margin-top: 50px;
+}
 .feartured-title{
     color:rgba(245, 245, 54, 0.604)
 }

@@ -12,9 +12,10 @@
         <title>Feartured-today</title>
     </head>
     <body>
-        <h1 class="feartured-title">Feartured-today</h1>
+        
         <section class="pt-5 pb-5">
-            <div class="container">
+            <div class="container featured-ctn">
+                <h1 class="feartured-title">Feartured-today</h1>
                 <div class="row">
 
                     <div class="col-12 text-right div-btn-moving">
@@ -37,7 +38,7 @@
                                                 <div class="hoverImg">
                                                     <img class="img-fluid" alt="Movie Thumbnail" src="https://m.media-amazon.com/images/M/MV5BYzEyNTk1Y2EtODQ1YS00MGI1LWI3ZTQtODdkMzc3MjZkZTdmXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,214_.jpg">
                                                     <a href="https://www.facebook.com/lovelifeloveuu/" class="a-img">
-                                                        <div class="seePlay"></div>
+                                                        <div class="seePlay seePlay-featured"></div>
                                                     </a>
                                                 </div>
                                                 <div class="card-body">
@@ -53,7 +54,7 @@
                                                 <div class="hoverImg">
                                                 <img class="img-fluid" alt="100%x280" src="https://m.media-amazon.com/images/M/MV5BOGMwMDIxMDYtYTE3OC00N2YwLTg0YzgtM2U4NzgxMDFmZmQ1XkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,214_.jpg">
                                                     <a href="https://www.facebook.com/lovelifeloveuu/" class="a-img">
-                                                        <div class="seePlay"></div>
+                                                        <div class="seePlay seePlay-featured"></div>
                                                     </a>
                                                 </div>
                                                 <div class="card-body">
@@ -69,7 +70,7 @@
                                                 <div class="hoverImg">
                                                 <img class="img-fluid" alt="100%x280" src="https://m.media-amazon.com/images/M/MV5BYTJhYmZmYmEtODZjYy00MzlkLThiYzMtZjQ0NmYwNTRhNzRkXkEyXkFqcGc@._V1_QL75_UX380_CR0,36,380,214_.jpg">
                                                     <a href="https://www.facebook.com/lovelifeloveuu/" class="a-img">
-                                                        <div class="seePlay"></div>
+                                                        <div class="seePlay seePlay-featured"></div>
                                                     </a>
                                                 </div>
                                                 <div class="card-body">
@@ -92,7 +93,7 @@
                                                 <div class="hoverImg">
                                                     <img class="img-fluid" alt="Movie Thumbnail" src="https://m.media-amazon.com/images/M/MV5BYzEyNTk1Y2EtODQ1YS00MGI1LWI3ZTQtODdkMzc3MjZkZTdmXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,214_.jpg">
                                                     <a href="https://www.facebook.com/lovelifeloveuu/" class="a-img">
-                                                        <div class="seePlay"></div>
+                                                        <div class="seePlay seePlay-featured"></div>
                                                     </a>
                                                 </div>
                                                 <div class="card-body">
@@ -108,7 +109,7 @@
                                                 <div class="hoverImg">
                                                 <img class="img-fluid" alt="100%x280" src="https://m.media-amazon.com/images/M/MV5BOGMwMDIxMDYtYTE3OC00N2YwLTg0YzgtM2U4NzgxMDFmZmQ1XkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,214_.jpg">
                                                     <a href="https://www.facebook.com/lovelifeloveuu/" class="a-img">
-                                                        <div class="seePlay"></div>
+                                                        <div class="seePlay seePlay-featured"></div>
                                                     </a>
                                                 </div>
                                                 <div class="card-body">
@@ -124,7 +125,7 @@
                                                 <div class="hoverImg">
                                                 <img class="img-fluid" alt="100%x280" src="https://m.media-amazon.com/images/M/MV5BYTJhYmZmYmEtODZjYy00MzlkLThiYzMtZjQ0NmYwNTRhNzRkXkEyXkFqcGc@._V1_QL75_UX380_CR0,36,380,214_.jpg">
                                                     <a href="https://www.facebook.com/lovelifeloveuu/" class="a-img">
-                                                        <div class="seePlay"></div>
+                                                        <div class="seePlay seePlay-featured"></div>
                                                     </a>
                                                 </div>
                                                 <div class="card-body">
