@@ -9,6 +9,8 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="./rightcontent.css">
+
         <title>FirstContent</title>
     </head>
     <body>
@@ -16,11 +18,7 @@
             <div class="HomePage-leftcontent col-md-8">
                 <div class="Leftcontent-recommendedmovie">
                     <div id="carouselExampleIndicators" class="carousel slide parent-slide">
-                        <!--                                <div class="carousel-indicators">
-                                                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                                                        </div>-->
+
                         <div class="carousel-inner Left-slide">
                             <div class="carousel-item active">
                                 <img class="img-slide" src="./src-img/pexels-eberhard-grossgasteiger-640781.jpg" alt="First slide">
@@ -113,7 +111,88 @@
             </div>
 
             <div class="HomePage-rightcontent col-md-4">
+                <div class="main-right">
+                    <div class="mainr-title">
+                        Up next
+                    </div>
+                    <div class="mainr-info" style="color: #fff">
+                        <div class="mainr-information">
+                            <div class="mainr-information-img">
+                                <img src="https://m.media-amazon.com/images/M/MV5BYzAzZDUwMDktN2I5YS00MTFlLWEwOTQtMTMxNGRhM2U2NmI4XkEyXkFqcGdeQXVyMzk0NzQ5MjU@._V1_QL75_UX280_CR0,0,280,414_.jpg" alt="">
+                            </div>  
+                            <div class="mainr-information-dt">  
+                                <div class="play-button">
+                                    <div class="triangle"></div>
+                                </div>       
+                                <div class="mainr-information-details no-wrap">
+                                    5 Summer Movies We Can't Wait For<br>
+                                    <span class="gray-text">'Deadpool & Wolverine' and More</span>
+                                </div>
+                                <div class="reactions">
+                                    <span class="reaction">
+                                        <i class="fas fa-surprise"></i> 106
+                                    </span>
+                                    <span class="reaction">
+                                        <i class="fas fa-grin"></i> 457
+                                    </span>
+                                </div>
 
+
+
+                            </div>
+                        </div>
+                        <div class="mainr-information">
+                            <div class="mainr-information-img">
+                                <img src="https://m.media-amazon.com/images/M/MV5BMTcyYjc5NTMtMDIxZC00MjM4LWI3ZWEtOTVkOWEwNDEyN2M3XkEyXkFqcGc@._V1_QL75_UX280_CR0,0,280,414_.jpg" alt="">
+                            </div>  
+                            <div class="mainr-information-dt">  
+                                <div class="play-button">
+                                    <div class="triangle"></div>
+                                </div>       
+                                <div class="mainr-information-details no-wrap">
+                                    Get Into Character With Anya<br>
+                                    <span class="gray-text">The 'Furiousa' Stars Reveal Their On-Set </span>
+                                </div>
+                                <div class="reactions">
+                                    <span class="reaction">
+                                        <i class="fas fa-thumbs-up"></i> 258
+                                    </span>
+                                    <span class="reaction">
+                                        <i class="fas fa-heart"></i> 196
+                                    </span>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                        <div class="mainr-information">
+                            <div class="mainr-information-img">
+                                <img src="https://m.media-amazon.com/images/M/MV5BN2JjNjIwNDgtNTgxNy00OTViLTk0YWUtMTI0OWYwZWNmMDJmXkEyXkFqcGdeQXVyNDYzNjU3ODM@._V1_QL75_UX280_CR0,0,280,414_.jpg" alt="">
+                            </div>  
+                            <div class="mainr-information-dt">  
+                                <div class="play-button">
+                                    <div class="triangle"></div>
+                                </div>       
+                                <div class="mainr-information-details no-wrap">
+                                    Brad Pitt & George Clooney  Are 'Wolfs'<br>
+                                    <span class="gray-text">Watch the trailer</span>
+                                </div>
+
+                                <div class="reactions">
+                                    <span class="reaction">
+                                        <i class="fas fa-smile"></i> 475
+                                    </span>
+                                    <span class="reaction">
+                                        <i class="fas fa-laugh"></i> 225
+                                    </span>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </body>

@@ -15,6 +15,7 @@
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>     
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
         <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <link rel="stylesheet" href="./HomePage.css">
         <title>HomePage</title>
     </head>
@@ -27,6 +28,9 @@
                 <jsp:include page="first-content.jsp" />
                 <jsp:include page="feartured-today.jsp" />
                 <jsp:include page="TopInMonth.jsp" />
+                <jsp:include page="actor.jsp" />
+                <jsp:include page="footer.jsp" />
+                
             </div>
 
             <div class="HomePage-footer">

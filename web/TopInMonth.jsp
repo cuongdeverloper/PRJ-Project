@@ -18,7 +18,11 @@
     </head>
     <body>
         <div class="row">
-    <h1 class="text-warning">Top in month</h1>
+    <div class="col-12 header-cele">
+                <span class="bar"></span>
+                <h3>Top In Month ></h3>
+                <span class="arrow"></span>
+            </div>
     <div class="col">
         <div class="col-12 text-right div-btn-moving">
             <a class="btn btn-primary mb-3 mr-1 btn-featured bbb_viewed_nav bbb_viewed_prev" href="#carouselExampleIndicators3" role="button" data-slide="prev">

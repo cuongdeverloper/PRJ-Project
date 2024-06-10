@@ -14,8 +14,13 @@
     <body>
         
         <section class="pt-5 pb-5">
+            <div class=" header-cele">
+                <span class="bar"></span>
+                <h3>Feartured today ></h3>
+                <span class="arrow"></span>
+            </div>
             <div class="container featured-ctn">
-                <h1 class="feartured-title">Feartured-today</h1>
+            
                 <div class="row">
 
                     <div class="col-12 text-right div-btn-moving">
