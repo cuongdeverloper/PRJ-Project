@@ -17,9 +17,13 @@
         <div class="HomePage-firstcontent row">
             <div class="HomePage-leftcontent col-md-8">
                 <div class="Leftcontent-recommendedmovie">
-                    <div id="carouselExampleIndicators" class="carousel slide parent-slide">
-
-                        <div class="carousel-inner Left-slide">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+                        <!--<div class="carousel-indicators">-->
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <!--</div>-->
+                        <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <img class="img-slide" src="./src-img/pexels-eberhard-grossgasteiger-640781.jpg" alt="First slide">
                                 <div class="slide-model-trailer img-child-slide"> 
@@ -46,9 +50,8 @@
 
                                         </div>
                                     </a>
-                                </div>
+                                </div> 
                             </div>
-
                             <div class="carousel-item">
                                 <img class="img-slide" src="./src-img/pexels-christian-heitz-842711.jpg" alt="Second slide">
                                 <div class="slide-model-trailer img-child-slide"> 
@@ -106,18 +109,18 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="carousel-control-prev btn-prennext" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Previous</span>
                         </button>
-                        <button class="carousel-control-next btn-prennext" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
                         </button>
                     </div>
 
                 </div>
-                
+
             </div>
 
             <div class="HomePage-rightcontent col-md-4">

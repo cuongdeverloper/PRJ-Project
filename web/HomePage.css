@@ -75,12 +75,8 @@ li.nav-item{
     align-self: center;
 }
 .child-action{
-    height: 100%;
-    width: 100%;
     display: flex;
-    position: absolute;
-    right: -150px;
-    bottom: -110px;
+    align-items: flex-end;
 
 }
 
@@ -89,19 +85,29 @@ li.nav-item{
     height: 50px;
     width: 50px;
 }
+.btn-play-first :hover{
+    color: yellow
+}
 .title-film{
     font-weight: 700
 }
 .trailer-film{
     font-weight: 100
 }
-.child-action-description {
+/*.child-action-description {
     width: 55%;
+    height: 100%
+}*/
+.child-action-description a{
+    text-decoration: none
 }
-
-
-
-
+.child-action-reaction{
+    font-size: 20px;
+}
+.child-action-reaction svg:hover{
+    font-size: 30px;
+    color: yellow;
+}
 .card{
     width: 100%;
     height: auto;

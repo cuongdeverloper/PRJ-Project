@@ -25,7 +25,9 @@
                 <jsp:include page="Header.jsp" />                
 
             <div class="HomePage-body">
-                <jsp:include page="first-content.jsp" />
+                <%--<jsp:include page="testarrdata.jsp" />--%>
+                <%--<jsp:include page="first-content.jsp" />--%>
+                <jsp:include page="newfirst-ctn.jsp" />
                 <jsp:include page="feartured-today.jsp" />
                 <jsp:include page="actor.jsp" />
                 <jsp:include page="TopInMonth.jsp" />
