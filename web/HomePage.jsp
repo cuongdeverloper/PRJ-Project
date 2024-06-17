@@ -27,8 +27,9 @@
             <div class="HomePage-body">
                 <jsp:include page="first-content.jsp" />
                 <jsp:include page="feartured-today.jsp" />
-                <jsp:include page="TopInMonth.jsp" />
                 <jsp:include page="actor.jsp" />
+                <jsp:include page="TopInMonth.jsp" />
+                
                 <jsp:include page="footer.jsp" />
                 
             </div>
