@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Sign Up</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <video id="bgVideo" autoplay loop muted>
+        <source src="../img/hihi.mp4" type="video/mp4">
+    </video>
+    <div class="wrapper">
+        <div class="title-text">
+            <div class="title login"></div>
+            <div class="title signup"></div>
+        </div>
+        <div class="form-container">
+         <div class="slide-controls">
+           <input type="radio" name="slide" id="login" checked>
+           <input type="radio" name="slide" id="signup">
+           <label for="login" class="slide login">Login</label>
+           <label for="signup" class="slide signup">SignUp</label>
+           <div class="slider-tab"></div>
+         </div>
+         <div class="form-inner">
+           <form action="#" class="login">
+             <div class="field">
+               <input type="text" placeholder="Email Address" required>
+             </div>
+             <div class="field">
+               <input type="password" placeholder="Password" required>
+             </div>
+             <div class="pass-link">
+               <a href="#">Reset password?</a>
+             </div>
+             <div class="field btn">
+               <div class="btn-layer"></div>
+               <input type="submit" value="Login">
+             </div>
+             <div class="signup-link">
+               Don't Have Account? <a href="">Create A New</a>
+             </div>
+             <div class="social-login">
+               <p>Or sign in with</p>
+               <div class="social-icons">
+                 <a href="#" class="social-btn facebook"><img src="img/facebook.png" alt="Facebook"> Continue with Facebook</a>
+                 <a href="#" class="social-btn gmail"><img src="img/gmail.png" alt="Gmail"> Continue with Gmail</a>
+                 <a href="#" class="social-btn amazon"><img src="img/amazon.png" alt="Amazon"> Continue with Amazon</a>
+                 <a href="#" class="social-btn apple"><img src="img/apple.jpg" alt="Apple"> Continue with Apple</a>
+               </div>
+             </div>
+           </form>
+           <form action="#" class="signup">
+             <div class="field">
+               <input type="text" placeholder="Email Address" required>
+             </div>
+             <div class="field">
+               <input type="password" placeholder="Password" required>
+             </div>
+             <div class="field">
+               <input type="password" placeholder="Confirm Password" required>
+             </div>
+             <div class="field btn">
+               <div class="btn-layer"></div>
+               <input type="submit" value="SignUp">
+             </div>
+             <div class="social-signup">
+               <p>Or sign up with</p>
+               <div class="social-icons">
+                 <a href="#" class="social-btn facebook"><img src="img/facebook.png" alt="Facebook"> Continue with Facebook</a>
+                 <a href="#" class="social-btn gmail"><img src="img/gmail.png" alt="Gmail"> Continue with Gmail</a>
+                 <a href="#" class="social-btn amazon"><img src="img/amazon.png" alt="Amazon"> Continue with Amazon</a>
+                 <a href="#" class="social-btn apple"><img src="img/apple.jpg" alt="Apple"> Continue with Apple</a>
+               </div>
+             </div>
+           </form>
+         </div>
+       </div>
+     </div>
+     <script src="style.js"></script>
+   </body>
+ </html>
