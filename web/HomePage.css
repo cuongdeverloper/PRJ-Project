@@ -196,7 +196,19 @@ svg.bi.bi-x-circle-fill {
     flex-direction: row;
     gap:25px;
 }
-.resMobile{
+.resMobile{.modal-dialog {
+    margin: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.modal-content {
+    width: 100%;
+    /* min-height: 100%; */
+    height: 100%;
+    background-color: #000;
+}
+
     display: none
 }
 .title-child-header{

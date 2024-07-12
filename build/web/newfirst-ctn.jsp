@@ -11,7 +11,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="./rightcontent.css">
 
-        <title>FirstContent</title>
+        <link rel="stylesheet" href="./newfirst-ctn.css">
     </head>
     <body>
         <div class="HomePage-firstcontent row">

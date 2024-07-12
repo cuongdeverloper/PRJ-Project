@@ -16,9 +16,9 @@
         
     
         <section class="pt-5 pb-5">
-            <div class="header-featured">
-                <span class="bar"></span>
-                <h3>Top News ></h3>
+            <div class="header-cele">
+               <span class="bar"></span>
+                <h3>Top news ></h3>
                 <span class="arrow"></span>
             </div>
             <div class="topnews-container">
