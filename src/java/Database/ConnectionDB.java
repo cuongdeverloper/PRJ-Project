@@ -17,6 +17,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Random;
 
 /**
  *
@@ -50,16 +51,73 @@ public class ConnectionDB {
         User c = null;
         try {
             Connection con = getConnectionWithSqlJdbc();
-            PreparedStatement pstmt = con.prepareStatement("select * from Customers where email=? and password=?");
+            PreparedStatement pstmt = con.prepareStatement("select top 1 * from [User] where Email=?");
             pstmt.setString(1, email);
-            pstmt.setString(2, password);
             rs = pstmt.executeQuery();
+            System.out.println("why rthbsjdffjds");
+            if(rs.next()){
+                if(rs.getString("Password").equals(password)){
+                    c = new User();
+                    c.setEmail(email);
+                    c.setPassword(password);
+                    c.setPriority(rs.getInt("Priority"));
+                    c.setUserName(rs.getString("UserName"));
+                    c.setUserID(rs.getInt("UserID"));
+                }
+            }
 
         } catch (Exception e) {
             System.out.println("error : " + e);
         }
         return c;
     }
+    
+    public static int generateRandomNumber(int digits) {
+        Random random = new Random();
+        int min = (int) Math.pow(10, digits - 1); // Minimum value of the random number
+        int max = (int) Math.pow(10, digits) - 1; // Maximum value of the random number
+        return random.nextInt(max - min + 1) + min;
+    }
+    
+    public static User getSignUp(String email, String password, String name){
+        User c = null;
+        try{
+            Connection con = getConnectionWithSqlJdbc();
+            PreparedStatement pstmt = con.prepareStatement("insert into [User] (UserID, UserName, Password, Email)"
+                    + "values (?,?,?,?)");
+            int rd = generateRandomNumber(9);
+            pstmt.setInt(1, rd);
+            pstmt.setString(2, name);
+            pstmt.setString(3, password);
+            pstmt.setString(4, email);
+            if(pstmt.execute()){
+                c = new User();
+                c.setEmail(email);
+                c.setPassword(password);
+                c.setPriority(0);
+                c.setUserName(name);
+                c.setUserID(rd);               
+            }
+        }catch(Exception e){
+            
+        }
+        return c;
+        
+    }
+    public static boolean checkEmail(String Email){
+        
+        try{
+            Connection con = getConnectionWithSqlJdbc();
+            PreparedStatement pstmt = con.prepareStatement("select top 1 * from User where Email = ?");
+            ResultSet rs = pstmt.executeQuery();
+            if(rs.next()){
+                return true;
+            }
+        }catch(Exception e){
+        }
+        return false;
+    }
+    
 
     //10 trailer
     public static List<Trailer> getListTrailer() {
