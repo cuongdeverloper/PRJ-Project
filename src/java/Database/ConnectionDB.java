@@ -7,6 +7,7 @@ package Database;
 import Model.Actor;
 import Model.Director;
 import Model.Movie;
+import Model.Search_Movie;
 import Model.Trailer;
 import Model.User;
 import java.sql.Connection;
@@ -16,7 +17,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Random;
 
 /**
@@ -305,11 +308,46 @@ public class ConnectionDB {
         }
         return list;
     }
+    
+    public static Map<Integer, Search_Movie> searchMovies(String Title){
+        Map<Integer, Search_Movie> map = new HashMap<>();
+        Connection con = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+        try{
+            con = getConnectionWithSqlJdbc();
+            pstmt = con.prepareStatement("select top 1 MovieID, Title, imgUrl, ActorName, RealaseTime from Movies inner join Movie_Actor on Movies.MovieID = Movie_Actor.MovieID inner join Actor on Actor.ActorID = Movie_Actor.ActorID inner join Trailer on Trailer.MovieID = Movies.MovieID where Title = ?");
+            pstmt.setString(1, "%"+Title+"%");
+            rs = pstmt.executeQuery();
+            System.out.println("dasjasfhsa asfa");
+            
+            while(rs.next()){
+                if(!map.containsKey(rs.getInt("MovieID"))){
+                    Search_Movie s = new Search_Movie();
+                    s.setMovieID(rs.getInt("MovieID"));
+                    s.setImgUrl(rs.getString("imgUrl"));
+                    s.setTitle(rs.getString("Title"));
+                    s.addActor(rs.getString("ActorName"));
+                    map.put(rs.getInt("MovieID"), s);
+    
+                }else{
+                    map.get(rs.getInt("MovieID")).addActor(rs.getString("ActorName"));
+                }
+                              
+            }
+            
+        }catch(Exception e){
+            
+        }
+        return map;
+    }   
+        
+    
 
     public static void main(String args[]) {
-
-        for (Director t : getDirectors()) {
-            System.out.println(t.toString());
+        Map<Integer, Search_Movie> map = searchMovies("h");
+        for (Integer t : map.keySet()) {
+            System.out.println(map.get(t).toString());
         }
     }
 }

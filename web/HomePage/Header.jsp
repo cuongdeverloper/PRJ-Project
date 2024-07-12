@@ -7,6 +7,36 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Header</title>
+        <script>
+            function sendRequest() {
+                var input = document.getElementById("input_vl");
+                console.log("sendRequest called");
+                var xhr = new XMLHttpRequest();
+                var url = "http://localhost:8080/Group_Projevt/Search";
+                xhr.open("POST", url, true);
+                xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4 && xhr.statdus === 200) {
+                        document.getElementById("response").innerHTML = xhr.responseText;
+                    }
+                };
+                var params = new URLSearchParams();
+                params.append("Title",input.value);
+                xhr.send(params.toString());
+   
+            }
+            function setupListeners() {
+                var input = document.getElementById("input_vl");
+                input.addEventListener('input', () => {
+                    if (input.value.length > 1) {
+                        sendRequest();
+                    }
+
+                });
+            }
+            window.onload = setupListeners;
+        </script>
     </head>
 
     <body>
@@ -43,8 +73,9 @@
                     </ul>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-                        <form class="d-flex">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <form class="d-flex" id="myForm">
+                            <input class="form-control me-2" id="input_vl" type="search" placeholder="Search" aria-label="Search">
+                            <p id="response"></p>
                         </form>
                     </div>
                 </div>
