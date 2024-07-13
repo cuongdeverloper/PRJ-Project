@@ -4,6 +4,12 @@
  */
 package Controller;
 
+import com.google.gson.Gson;
+import Database.ConnectionDB;
+import Model.Actor;
+
+import Model.Trailer;
+import jakarta.servlet.RequestDispatcher;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
@@ -11,6 +17,8 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import java.util.List;
+import java.util.Map;
 
 /**
  *
@@ -36,7 +44,7 @@ public class Search extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet Search</title>");            
+            out.println("<title>Servlet Search</title>");
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet Search at " + request.getContextPath() + "</h1>");
@@ -57,7 +65,14 @@ public class Search extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        String path = "";
+        if(request.getParameter("category").equals("Title")){
+            path = "SearchPage/MovieSearch.jsp";
+        }else if(request.getParameter("category").equals("Actor")){
+            path = "SearchPage/ActorSearch.jsp";
+        }
+        RequestDispatcher rd = request.getRequestDispatcher(path);
+        rd.forward(request, response);
     }
 
     /**
@@ -73,16 +88,21 @@ public class Search extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
-        if(request.getParameter("Title")!=null){
-            
-            
-        }else if(request.getParameter("Actor")!=null){
-            
-        }else if(request.getParameter("Director")!=null){
-            
+        String query = request.getParameter("Query");
+        String category = request.getParameter("Category");
+        Gson gson = new Gson();
+        String jsonResponse = "";
+
+        if (category != null && category.equals("Title")) {
+            List<Trailer> listMovies = ConnectionDB.searchMovies(query);
+            jsonResponse = gson.toJson(listMovies);
+        } else if (category != null && category.equals("Actor")) {
+            List<Actor> listActors = ConnectionDB.searchActors(query);
+            jsonResponse = gson.toJson(listActors);
         }
-     
-        out.println("trung dep zai");
+
+        out.print(jsonResponse);
+        out.close();
 
     }
 

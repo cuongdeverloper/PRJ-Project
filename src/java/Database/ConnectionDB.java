@@ -7,7 +7,6 @@ package Database;
 import Model.Actor;
 import Model.Director;
 import Model.Movie;
-import Model.Search_Movie;
 import Model.Trailer;
 import Model.User;
 import java.sql.Connection;
@@ -309,45 +308,69 @@ public class ConnectionDB {
         return list;
     }
     
-    public static Map<Integer, Search_Movie> searchMovies(String Title){
-        Map<Integer, Search_Movie> map = new HashMap<>();
+    public static List<Trailer> searchMovies(String Title){
+        List<Trailer> list = new ArrayList<>();
         Connection con = null;
         PreparedStatement pstmt = null;
         ResultSet rs = null;
         try{
             con = getConnectionWithSqlJdbc();
-            pstmt = con.prepareStatement("select top 1 MovieID, Title, imgUrl, ActorName, RealaseTime from Movies inner join Movie_Actor on Movies.MovieID = Movie_Actor.MovieID inner join Actor on Actor.ActorID = Movie_Actor.ActorID inner join Trailer on Trailer.MovieID = Movies.MovieID where Title = ?");
+            pstmt = con.prepareStatement("select top 5 Movies.MovieID, Title, imgUrl, RealaseTime from Movies inner join Trailer on Trailer.MovieID = Movies.MovieID where Title LIKE ?");
             pstmt.setString(1, "%"+Title+"%");
             rs = pstmt.executeQuery();
-            System.out.println("dasjasfhsa asfa");
             
             while(rs.next()){
-                if(!map.containsKey(rs.getInt("MovieID"))){
-                    Search_Movie s = new Search_Movie();
-                    s.setMovieID(rs.getInt("MovieID"));
-                    s.setImgUrl(rs.getString("imgUrl"));
-                    s.setTitle(rs.getString("Title"));
-                    s.addActor(rs.getString("ActorName"));
-                    map.put(rs.getInt("MovieID"), s);
-    
-                }else{
-                    map.get(rs.getInt("MovieID")).addActor(rs.getString("ActorName"));
-                }
+                Trailer t = new Trailer();
+                Movie m = new Movie();
+                
+                m.setMovieID(rs.getInt("MovieID"));
+                m.setRealaseTime(rs.getString("RealaseTime"));
+                m.setTitle(rs.getString("Title"));
+                
+                t.setImgUrl(rs.getString("imgUrl"));
+                t.setMovieID(m);
+                list.add(t);
                               
             }
             
         }catch(Exception e){
-            
+            System.out.println(e.getMessage());
         }
-        return map;
-    }   
-        
+        return list;
+    }
+    public static List<Actor> searchActors(String name){
+        List<Actor> list = new ArrayList<>();
+        Connection con = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+        try{
+            con = getConnectionWithSqlJdbc();
+            pstmt = con.prepareStatement("select top 10 Actor.ActorID, ActorImg, ActorName, Nationality from Actor  where ActorName LIKE ?");          
+            pstmt.setString(1, "%"+name+"%");
+            rs = pstmt.executeQuery();
+            while(rs.next()){
+                Actor a = new Actor();
+                a.setActorID(rs.getInt("ActorID"));
+                a.setActorImg(rs.getString("ActorImg"));
+                a.setActorName(rs.getString("ActorName"));
+                a.setNationality(rs.getString("Nationality"));
+                list.add(a);
+                
+            }
+            
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+        return list;
+    }
+
     
 
     public static void main(String args[]) {
-        Map<Integer, Search_Movie> map = searchMovies("h");
-        for (Integer t : map.keySet()) {
-            System.out.println(map.get(t).toString());
+        
+        
+        for (Actor t : searchActors("to")) {
+            System.out.println(t.toString());
         }
     }
 }

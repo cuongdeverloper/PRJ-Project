@@ -9,7 +9,10 @@
         <title>Header</title>
         <script>
             function sendRequest() {
-                var input = document.getElementById("input_vl");
+                var input = document.getElementById("search-input");
+                var category = document.getElementById("dropdown-select");
+              
+
                 console.log("sendRequest called");
                 var xhr = new XMLHttpRequest();
                 var url = "http://localhost:8080/Group_Projevt/Search";
@@ -17,26 +20,120 @@
                 xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
                 xhr.onreadystatechange = function () {
-                    if (xhr.readyState === 4 && xhr.statdus === 200) {
-                        document.getElementById("response").innerHTML = xhr.responseText;
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        console.log("Response Text:", xhr.responseText);
+                        const response = JSON.parse(xhr.responseText);
+
+                        let output = '';
+                        if (category.value === 'Title') {
+                            response.forEach(item => {
+                                let title = '';
+                                let releaseTime = '';
+
+                                if (item.MovieID) {
+                                    title = item.MovieID.Title;
+                                    console.log(title);
+                                    releaseTime = item.MovieID.RealaseTime || '';
+                                }
+
+
+                                output += "<div class=\"result-item\">" +
+                                        "<img src=\"" + item.imgUrl + "\" alt=\"" + title + "\">" +
+                                        "<div class=\"details\">" +
+                                        "<div class=\"title\">" + title + "</div>" +
+                                        "<div class=\"release-time\">" + releaseTime + "</div>" +
+                                        "</div>" +
+                                        "</div>";
+                            });
+
+                        } else if (category.value === 'Actor') {
+                            response.forEach(item => {
+                               
+
+
+                                output += "<div class=\"result-item\">" +
+                                        "<img src=\"" + item.ActorImg + "\" alt=\"" + item.ActorName + "\">" +
+                                        "<div class=\"details\">" +
+                                        "<div class=\"title\">" + item.ActorName + "</div>" +
+                                        "<div class=\"release-time\">" + item.Nationality + "</div>" +
+                                        "</div>" +
+                                        "</div>";
+                            });
+                        }
+
+
+                        document.getElementById("response").innerHTML = output;
                     }
                 };
+
                 var params = new URLSearchParams();
-                params.append("Title",input.value);
+                params.append("Query", input.value);
+                params.append("Category", category.value);
+
                 xhr.send(params.toString());
-   
+
             }
             function setupListeners() {
-                var input = document.getElementById("input_vl");
+                var input = document.getElementById("search-input");
                 input.addEventListener('input', () => {
                     if (input.value.length > 1) {
                         sendRequest();
+                    } else {
+                        document.getElementById("response").innerHTML = "";
                     }
 
                 });
             }
             window.onload = setupListeners;
+            function changeFormAction(event) {
+                // Prevent the default form submission
+                event.preventDefault();
+
+                // Get the form element
+                var form = document.getElementById('search-form');
+                const category = document.getElementById('dropdown-select').value;
+                const query = document.getElementById('search-input').value;
+                // Update the action attribute based on your logic
+                form.action = 'http://localhost:8080/Group_Projevt/Search?' + 'category=' + category + '&query=' + query;
+
+                // Submit the form programmatically
+                form.submit();
+            }
+
+
+
         </script>
+        <style>
+            .results-container {
+                margin-top: 20px;
+            }
+            .result-item {
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+                padding: 10px;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                background-color: #fff;
+            }
+            .result-item img {
+                width: 50px;
+                height: 75px;
+                margin-right: 10px;
+                object-fit: cover;
+            }
+            .result-item .details {
+                display: flex;
+                flex-direction: column;
+            }
+            .result-item .details .title {
+                font-weight: bold;
+            }
+            .result-item .details .release-time {
+                font-size: 0.9em;
+                color: #666;
+            }
+        </style>
     </head>
 
     <body>
@@ -73,10 +170,22 @@
                     </ul>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-                        <form class="d-flex" id="myForm">
-                            <input class="form-control me-2" id="input_vl" type="search" placeholder="Search" aria-label="Search">
-                            <p id="response"></p>
+                        <form action="http://localhost:8080/Group_Projevt/Search" method="GET" class="search-form" id="search-form">
+                            <div class="dropdown">
+                                <select name="category" class="dropdown-select" id="dropdown-select">
+                                    <option value="Title">Title</option>
+                                    <option value="Actor">Actor</option>
+
+                                </select>
+                            </div>
+                            <input type="text" name="query" placeholder="Search Mockups, Logos, Design Templates..." class="search-input" id="search-input">
+                            <button type="submit" class="search-button" onclick="changeFormAction(event)">
+                                <img src="search-icon.png" alt="Search">
+                            </button>
                         </form>
+
+                        <div id="response" class="results-container"></div>
+
                     </div>
                 </div>
             </nav>
