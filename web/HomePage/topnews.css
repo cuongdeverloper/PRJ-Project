@@ -1,0 +1,34 @@
+.topnews-container {
+    height: 200px;
+}
+.card-topnews{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: auto
+}
+
+.topnew-body-content{
+    color: #fff
+}
+
+.topnew-img img{
+    min-height: 100%;
+    width: 100%;
+}
+
+.g-col-4{
+    height: 100%;
+    width: auto
+}
+.Topnews-title{
+    color: #E2B616
+}
+.div-btn-moving{
+    display: flex;
+    justify-content: center
+}
+.div-btn-moving a{
+    background:none;
+    border: none;
+}
