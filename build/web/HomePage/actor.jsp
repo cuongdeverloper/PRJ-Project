@@ -40,7 +40,9 @@
                     %>
                 <div class="col-md-2 col-sm-6 info-each">
                     <div class="info-img">
-                        <img src="<%= t.getActorImg() %>" alt="Jennifer Morrison"><br>
+                        <a href="./actorDetail?id=<%=t.getActorID()%>">
+                        <img src="<%= t.getActorImg() %>" alt=""><br>
+                            </a>
                         <div class="rank">19 ( <span style="color: green;">▲</span> 312 )</div>
                         <h5><%= t.getActorName() %></h5>
                     </div>

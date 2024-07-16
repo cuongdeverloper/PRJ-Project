@@ -4,8 +4,14 @@
 }
 .header-container {
     display: flex !important;
-    
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    z-index: 1000; 
     justify-content:  normal !important;
+    
 }
 
 .collapse.navbar-collapse {
@@ -27,7 +33,10 @@ li.nav-item{
     font-weight: 800;
 }
 .HomePage-body{
-    margin: 20px 50px 0 50px;
+        background-color: #000000 !important;
+        
+    position: relative;
+    overflow: hidden;
     max-height: 100%;
     max-width: 100%;
 }
@@ -42,6 +51,7 @@ li.nav-item{
 .HomePage-firstcontent{
     max-height: 100%;
     max-width: 100%;
+    margin-top: 100px;
 }
 .Leftcontent-recommendedmovie{
     max-height: 100%;
@@ -106,7 +116,7 @@ li.nav-item{
 }
 .child-action-reaction svg:hover{
     font-size: 30px;
-    color: yellow;
+    
 }
 .card{
     width: 100%;
@@ -261,7 +271,7 @@ form#search-form {
   flex-direction: column
 }
 .results-container {
-        margin-top: 20px;
+        margin-top: 80px !important;
     }
     .result-item {
         display: flex;
@@ -347,6 +357,8 @@ form#search-form {
 .result-layout {
     display: flex;
     justify-content: center;
+    background-color: #000000;
+    
 }
 .bi-search {
   vertical-align: middle;
@@ -373,7 +385,7 @@ span.span-profile {
     
 }
 .nav-item-profile:hover{
-    opacity: 0.6;
+    opacity: 0.9;
     color: #E2B616
 }
 .dropdown {
@@ -456,7 +468,8 @@ span.span-profile {
 
 /*feartured*/
 .featured-ctn{
-    margin-top: 50px;
+    margin-top: 150px;
+
     
 }
 .container.featured-ctn {
@@ -519,6 +532,7 @@ span.span-profile {
             .card-body {
                 display: flex;
                 flex-direction: column;
+                height: 250px !important;
                 /*flex: 1;*/
                 
             }
@@ -748,3 +762,44 @@ span.span-profile {
     .box2l-icon .fab {
         color: white;
     }
+    .card-featured{
+        width: 80% !important
+    }
+    
+    
+    .liked-film{
+        font-size: 30px;
+    }
+    /* CSS for the like button */
+.child-action-reaction {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    padding: 5px;
+    transition: transform 0.2s;
+}
+
+.child-action-reaction:hover {
+    transform: scale(1.1);
+}
+
+
+.green-button {
+    color: green !important; 
+}
+.red-button{
+    color: red !important
+}
+
+.card-text-div {
+    display: flex;
+    align-items: center; /* Align text vertically in the center */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 100px; /* Set a fixed height or adjust based on your design */
+    padding: 20px; /* Add padding as needed */
+    margin-bottom: 10px; /* Optional: Adjust margin as needed */
+}

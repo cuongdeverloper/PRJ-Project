@@ -16,6 +16,10 @@ public class Director {
     private String Nationality;
     private Date DoB;
 
+    public Director(int DirectorID) {
+        this.DirectorID = DirectorID;
+    }
+    
     public Director() {
     }
 

@@ -18,6 +18,13 @@ public class User {
     public User() {
     }
 
+    public User(String UserName, String Password, String Email, int Priority) {
+        this.UserName = UserName;
+        this.Password = Password;
+        this.Email = Email;
+        this.Priority = Priority;
+    }
+
     public User(int UserID, String UserName, String Password, String Email, int Priority) {
         this.UserID = UserID;
         this.UserName = UserName;
@@ -69,8 +76,5 @@ public class User {
     @Override
     public String toString() {
         return "User{" + "UserID=" + UserID + ", UserName=" + UserName + ", Password=" + Password + ", Email=" + Email + ", Priority=" + Priority + '}';
-    }
-    
-            
-    
+    }          
 }

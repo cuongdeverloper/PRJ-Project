@@ -1,13 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package Model;
 
-/**
- *
- * @author 1
- */
+package Model;
 public class Movie {
     private int MovieID;
     private Director DirectorID;
@@ -18,7 +10,8 @@ public class Movie {
     private String MovieLength;
     private float Rating;
     private String Certificate;
-
+    private int numberOfLikes;
+    
     public Movie() {
     }
 
@@ -105,6 +98,15 @@ public class Movie {
     public void setCertificate(String Certificate) {
         this.Certificate = Certificate;
     }
+
+    public int getNumberOfLikes() {
+        return numberOfLikes;
+    }
+
+    public void setNumberOfLikes(int numberOfLikes) {
+        this.numberOfLikes = numberOfLikes;
+    }
+    
     
 }
     

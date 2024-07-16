@@ -12,6 +12,10 @@ public class Genre {
     private int GenreID;
     private String GenreName;
 
+    public Genre(int GenreID) {
+        this.GenreID = GenreID;
+    }
+
     public Genre() {
     }
 

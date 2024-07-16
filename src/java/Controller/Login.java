@@ -90,7 +90,11 @@ public class Login extends HttpServlet {
                 Cookie cookie = new Cookie("UserID", "" + c.getUserID());
                 cookie.setMaxAge(24 * 60 * 60);
                 response.addCookie(cookie);
+                if(c.getPriority() == 1) {
                 response.sendRedirect("/Group_Projevt/home");
+                } else {
+                    response.sendRedirect("/Group_Projevt/adminController");
+                }
             } else {
                 response.sendRedirect("/Group_Projevt/Login");
             }

@@ -43,10 +43,10 @@
                                         Trailer trailer = featureList.get(i * 3 + j);
                                 %>
                                 <div class="col-md-4 mb-3 card-column-item">
-                                    <div class="card">
+                                    <div class="card card-featured">
                                         <div class="hoverImg">
                                             <img class="img-fluid" alt="Movie Thumbnail" src="<%= trailer.getImgUrl()%>">
-                                            <a href="https://www.facebook.com/lovelifeloveuu/" class="a-img">
+                                            <a href="./movieDetail?id=<%=trailer.getMovieID().getMovieID()%>">
                                                 <div class="seePlay seePlay-featured"></div>
                                             </a>
                                         </div>

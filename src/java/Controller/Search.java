@@ -95,6 +95,7 @@ public class Search extends HttpServlet {
 
         if (category != null && category.equals("Title")) {
             List<Trailer> listMovies = ConnectionDB.searchMovies(query);
+            System.out.println(listMovies.toString());
             jsonResponse = gson.toJson(listMovies);
         } else if (category != null && category.equals("Actor")) {
             List<Actor> listActors = ConnectionDB.searchActors(query);

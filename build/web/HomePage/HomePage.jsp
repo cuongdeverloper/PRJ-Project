@@ -1,4 +1,11 @@
 <%@page contentType="text/html" pageEncoding="UTF-8" %>
+<%@page import="Database.ConnectionDB"%>
+<%@page import="java.util.List"%>
+<%@page import="com.google.gson.Gson"%>
+<%
+Object u = request.getSession().getAttribute("user");
+Boolean token = (u != null);
+%>
 <!DOCTYPE html>
 <html>
 
@@ -18,6 +25,31 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <link rel="stylesheet" href="./HomePage/HomePage.css">
         <title>HomePage</title>
+        <script src="./HomePage/LikeAction.js"></script>
+        
+            <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                if (<%=token%> && localStorage.getItem('likedlist') == null) {
+                    var xhr = new XMLHttpRequest();
+                    var url = "http://localhost:8080/Group_Projevt/Action";
+                    xhr.open("GET", url, true);
+                    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+                    xhr.onreadystatechange = function () {
+                        if (xhr.readyState === 4 && xhr.status === 200) {
+                            console.log("Response Text:", xhr.responseText);
+                            const response = JSON.parse(xhr.responseText);
+                            localStorage.setItem('likedlist', xhr.responseText);
+                        }
+                    };
+                    xhr.send();
+                }else if(!<%=token%> && localStorage.getItem('likedlist') != null){
+                    localStorage.removeItem('likedlist');
+                }
+
+            });
+        
+        </script>
     </head>
 
     <body>
